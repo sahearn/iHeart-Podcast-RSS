@@ -4,7 +4,6 @@ while ($full_code =~ m#podcast\-episode\-card.*?podcast\-episode\-name.*?<a.*?hr
 	my $date = $3;
 	my $story = $5;
 
-	my $clean_title = slugify($title);
 	$title =~ s/\&/\&amp;/g;
 
 	my $t = Time::Piece->strptime($date, "%B %e, %Y");
